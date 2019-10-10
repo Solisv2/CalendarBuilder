@@ -37,13 +37,28 @@ namespace CalendarBuilder
             int ModAns=0;
             for (int i = StartCount; i <= EndCount; i++)
             {
-                sb.Append($"{i, 5}");
+                sb.Append($"{i,5}");
                 sb.Append(" ");
                 ModAns = i % 7;
+                int i2 = i;
+                ModAns = i % 7;
+                Console.WriteLine(ModAns);
+                Console.WriteLine("");
+
                 if (ModAns == 0)
                 {
+                    //sb.Append($"{i,5}");
+                    //sb.Append(" ");
+                    //Console.WriteLine(ModAns);
+
                     sb.AppendLine();
                 }
+                //else if (ModAns > 0)
+                //{
+                //    sb.Append($"{5+ModAns}");
+                //    sb.Append(" ");
+                //    sb.AppendLine();
+                //}
             }
             return sb.ToString();
         }
